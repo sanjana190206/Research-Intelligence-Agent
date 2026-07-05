@@ -14,6 +14,10 @@ from rag.rag_pipeline import ask_question_with_evidence
 from rag.report_exporter import build_docx_report, build_markdown_report, build_pdf_report
 from rag.summarizer import summarize_paper
 from rag.vector_store import store_chunks
+import os
+
+os.makedirs("uploads", exist_ok=True)
+os.makedirs("chroma_db", exist_ok=True)
 
 
 app = FastAPI(title="Research Intelligence Agent")
