@@ -66,5 +66,22 @@ Research-Intelligence-Agent/
 └── README.md
 ```
 🚀 **Live Demo:** https://research-intelligence-agent-3vgx.onrender.com/
+## Screenshots
+
+### Home Page
+
+![Home](assets/home.png)
+
+### Research Summary
+
+![Summary](assets/summary.png)
+
+### Literature Review
+
+![Review](assets/review.png)
+
+### Novelty Analysis
+
+![Novelty](assets/novelty.png)
 ## Author
 MLS.SANJANA
