@@ -38,7 +38,7 @@ Create a `.env` file.
 Example:
 
 ```env
-GOOGLE_API_KEY=YOUR_API_KEY
+Groq_API_KEY=YOUR_API_KEY
 ```
 
 ## Run
