@@ -234,3 +234,7 @@ def export_report(format_name: str):
         )
 
     return {"error": "Unsupported export format. Use md, pdf, or docx."}
+@app.get("/chunks")
+def chunks():
+    from rag.vector_store import get_all_chunks
+    return {"chunks": get_all_chunks()}
