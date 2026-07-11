@@ -14,6 +14,7 @@ from rag.rag_pipeline import ask_question_with_evidence
 from rag.report_exporter import build_docx_report, build_markdown_report, build_pdf_report
 from rag.summarizer import summarize_paper
 from rag.vector_store import store_chunks
+from rag.vector_store import collection
 import os
 
 os.makedirs("uploads", exist_ok=True)
@@ -234,7 +235,11 @@ def export_report(format_name: str):
         )
 
     return {"error": "Unsupported export format. Use md, pdf, or docx."}
-@app.get("/chunks")
-def chunks():
-    from rag.vector_store import get_all_chunks
-    return {"chunks": get_all_chunks()}
+@app.get("/debug")
+def debug():
+    data = collection.get()
+
+    return {
+        "count": collection.count(),
+        "documents": len(data["documents"])
+    }
