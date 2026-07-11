@@ -111,7 +111,7 @@ async def upload_pdf(file: UploadFile = File(...)):
     # =================
 
     chunks = chunk_text(text)
-    store_chunks(chunks, source=file.filename)
+    store_chunks(chunks)
     pages = extract_page_count(file_path)
     keywords = extract_top_keywords(text, n=5)
     active_paper["filename"] = file.filename
