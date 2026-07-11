@@ -241,5 +241,5 @@ def debug():
 
     return {
         "count": collection.count(),
-        "documents": len(data["documents"])
+        "documents": data["documents"][:2]
     }
